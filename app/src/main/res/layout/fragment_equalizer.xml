@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.prayosof.yvideo.model.EffectsFragmentModel"/>
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context=".view.fragment.video.EqualizerFragment">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBassBoost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Bass_Boost"
+                android:checked="@{model.isBassBoostEnabled}"/>
+
+            <SeekBar
+                android:id="@+id/seekBarBassBoost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:enabled="@{model.isBassBoostEnabled}"
+                android:max="1000"
+                android:progress="@{model.bassBoostStrength}"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="#1f000000"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchEqualizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/Equalizer"
+                android:checked="@{model.isEqualizerEnabled}"/>
+
+            <com.prayosof.yvideo.view.fragment.video.EqualizerView
+                android:id="@+id/equalizerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:enabled="@{model.isEqualizerEnabled}"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.video.CustomExoPlayerActivity">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exo_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:soundEffectsEnabled="true"
+        app:maxScale="6"
+        app:surface_type="texture_view">
+
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+
+            android:id="@+id/video_aspectratio"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_crop_24"
+            android:tint="@color/white"
+
+            />
+
+        <ImageButton
+            android:id="@+id/video_brightness"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@+id/btn_bassBoost"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:src="@drawable/ic_baseline_brightness_high_24"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/video_btn_bassBoost"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@+id/btn_equalizer"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bass_boost"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/video_btn_equalizer"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_equalizer"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/video_btn_download"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/file_download"
+            android:tint="@color/white" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/exo_unlock_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/exo_back_button"
+        android:background="@color/gray"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_lock_open_24"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/exo_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:backgroundTint="@android:color/transparent"
+        android:padding="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:visibility="visible" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvEqulizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#99000000"
+        android:visibility="gone"
+        app:cardElevation="8dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+
+        <LinearLayout
+            android:id="@+id/lll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/white"
+            android:backgroundTint="#99000000"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Equalizer"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/closeEq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_close_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBassBoost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#99000000"
+        android:visibility="gone"
+        app:cardElevation="8dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <ImageButton
+                android:id="@+id/bassBoostCloseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_close_24" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="8"
+                    android:text="@string/Bass_Boost"
+                    android:textColor="@color/white" />
+
+                <SeekBar
+                    android:id="@+id/bassboostSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="8"
+                    android:progressBackgroundTint="@color/white"
+                    android:progressTint="@color/orangered"
+                    android:thumbTint="@color/orangered" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="8"
+                    android:text="@string/virtualizer"
+                    android:textColor="@color/white" />
+
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="8"
+                    android:progressBackgroundTint="@color/white"
+                    android:progressTint="@color/orangered"
+                    android:thumbTint="@color/orangered" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBrightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        app:cardElevation="8dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:id="@+id/layout_top_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryDark">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/brightness"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/brightnessCloseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_close_24" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="10"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_brightness_low_24"
+                    android:tint="@color/black" />
+
+                <SeekBar
+                    android:id="@+id/brightnessSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_brightness_high_24"
+                    android:tint="@color/black" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        app:cardElevation="8dp"-->
+    <!--        android:id="@+id/cvVolume"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:layout_marginStart="30dp"-->
+    <!--        android:layout_marginEnd="30dp"-->
+    <!--        app:strokeWidth="1dp"-->
+    <!--        app:strokeColor="@color/white">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/layout_top_btn"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:background="@color/colorPrimaryDark"-->
+    <!--                android:layout_marginBottom="10dp">-->
+
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerVertical="true"-->
+    <!--                    android:ellipsize="marquee"-->
+    <!--                    android:gravity="center_horizontal"-->
+    <!--                    android:text="@string/volume"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:textSize="18sp"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    android:layout_marginStart="10dp"-->
+    <!--                    />-->
+
+    <!--                <ImageButton-->
+    <!--                    android:layout_marginEnd="10dp"-->
+    <!--                    android:id="@+id/closeButton"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerVertical="true"-->
+    <!--                    android:src="@drawable/ic_baseline_close_24"-->
+    <!--                    android:layout_alignParentEnd="true"-->
+    <!--                    android:background="@android:color/transparent"/>-->
+
+
+    <!--            </RelativeLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/llVolume"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:weightSum="10">-->
+
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:layout_weight="10"-->
+    <!--                    android:layout_marginBottom="20dp"-->
+    <!--                    android:layout_marginTop="15dp">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:layout_weight="2"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:src="@drawable/ic_baseline_volume_up_24"-->
+    <!--                        android:tint="@color/black"/>-->
+
+    <!--                    <SeekBar-->
+    <!--                        android:thumbTint="@color/orangered"-->
+    <!--                        android:progressTint="@color/orangered"-->
+    <!--                        android:id="@+id/volumeSeekBar"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_gravity="center"-->
+    <!--                        android:layout_weight="8"-->
+    <!--                        android:progressBackgroundTint="@color/white"/>-->
+
+
+    <!--                </LinearLayout>-->
+
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+
+    <!--    </com.google.android.material.card.MaterialCardView>-->
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/black"
+    android:focusableInTouchMode="true"
+    android:elevation="8dp"
+    app:layout_scrollFlags="scroll|enterAlways"
+    android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_white_24x24"
+            android:padding="16dp"/>
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shadow_Outer_Area="4dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/btn_bookmark"
+            android:layout_toEndOf="@+id/btn_home"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="8dp"
+            app:background_Color="@android:color/white"
+            app:background_ColorType="solid"
+            app:background_Type="fill"
+            app:stroke_Type="solid"
+            app:corner_Type="circular">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_search_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="Search"
+                    android:background="@android:color/white"
+                    android:textColorHint="#90000000"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:imeOptions="actionGo"
+                    android:imeActionId="666"
+                    android:imeActionLabel="Enter"
+                    android:maxLines="1"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/btn_search_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    app:tint="@color/gray"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:padding="4dp"
+                    app:tint="@color/black"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+        <ImageView
+            android:id="@+id/btn_bookmark"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_bookmark"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:padding="8dp"/>
+
+</RelativeLayout>

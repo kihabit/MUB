@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/songsMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                />
+
+            <ImageView
+                android:id="@+id/music_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/music_headphone" />
+
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="File Name"-->
+        <!--        android:layout_toEndOf="@id/music_img"-->
+        <!--        android:layout_marginStart="10dp"-->
+        <!--        android:layout_centerVertical="true"-->
+        <!--        android:textColor="@color/colorAccent"-->
+        <!--        android:layout_toStartOf="@id/menuMore"-->
+        <!--        android:id="@+id/music_file_name"/>-->
+
+
+        <TextView
+            android:id="@+id/music_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/music_img"
+            android:text="Music file name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>

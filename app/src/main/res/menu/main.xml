@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_sort_by"
+        android:orderInCategory="100"
+        android:title="@string/action_sort_by"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_share_app"
+        android:orderInCategory="100"
+        android:title="@string/action_share_app"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_download"
+        android:orderInCategory="100"
+        android:title="@string/action_download"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+
+    <item
+        android:title="Delete"
+        android:id="@+id/delete"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:title="Share"
+        android:id="@+id/share_file"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_refresh_24"
+        android:id="@+id/refresh_ic"
+        android:visible="false"/>
+
+
+</menu>

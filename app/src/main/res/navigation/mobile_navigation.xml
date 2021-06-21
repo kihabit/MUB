@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/bottom_videos_list">
+
+    <fragment
+        android:id="@+id/nav_audios"
+        android:name="com.prayosof.yvideo.view.fragment.audio.AudioFragment"
+        android:label="@string/title_music"
+        tools:layout="@layout/fragment_audios" />
+
+    <fragment
+        android:id="@+id/nav_duplicate_directory"
+        android:name="com.prayosof.yvideo.view.fragment.duplicate_video.DuplicateDirectoryFragment"
+        android:label="@string/menu_duplicate_directory"
+        tools:layout="@layout/fragment_duplicate_directory" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.prayosof.yvideo.view.fragment.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.prayosof.yvideo.view.fragment.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+
+    <fragment
+        android:id="@+id/bottom_videos_list"
+        android:name="com.prayosof.yvideo.view.fragment.video.MainVideoFragment"
+        android:label="@string/title_videos"
+        tools:layout="@layout/fragment_main_video" >
+
+<!--        <argument-->
+<!--            android:name="value"-->
+<!--            app:argType="integer"-->
+<!--            android:defaultValue="0" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_bottom_videos_list_to_mediaListFragment"-->
+<!--            app:destination="@id/mediaListFragment" >-->
+
+<!--            <argument-->
+<!--                android:name="value"-->
+<!--                app:argType="integer"-->
+<!--                android:defaultValue="0" />-->
+
+<!--        </action>-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottom_notifications"
+        android:name="com.prayosof.yvideo.view.fragment.audio.AudioFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_audios" />
+    <fragment
+        android:id="@+id/bottom_music"
+        android:name="com.prayosof.yvideo.view.fragment.audio.AudioFragment"
+        android:label="Music library"
+        tools:layout="@layout/fragment_audios"/>
+
+<!--    KJS-->
+<!--    <fragment-->
+<!--        android:id="@+id/bottom_download"-->
+<!--        android:name="com.video.fb.facebookvideodownloaderpaid.DownloadFragment"-->
+<!--        android:label="Download"-->
+<!--        tools:layout="@layout/fragment_download"/>-->
+    <fragment
+        android:id="@+id/bottom_download"
+        android:name="com.prayosof.yvideo.view.browser.fragments.WebDownloadFragment"
+        android:label="Download"
+        tools:layout="@layout/fragment_web_download"/>
+<!--    KJS Finish-->
+    <fragment
+        android:id="@+id/mediaListFragment"
+        android:name="com.prayosof.yvideo.view.fragment.media_list_with_searchbar.MediaListFragment"
+        android:label="Videos"
+        tools:layout="@layout/fragment_media_list" />
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.prayosof.yvideo.view.fragment.setting.SettingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.prayosof.yvideo.view.fragment.help.FeedBackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/fragment_feed_back" />
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.prayosof.yvideo.view.fragment.help.FAQFragment"
+        android:label="FAQs"
+        tools:layout="@layout/fragment_f_a_q" />
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.prayosof.yvideo.view.fragment.help.AboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.prayosof.yvideo.view.fragment.audio.AlbumFragment"
+        android:label="Albums"
+        tools:layout="@layout/fragment_album" >
+        <action
+            android:id="@+id/action_albumFragment_to_tracksFragment"
+            app:destination="@id/tracksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tracksFragment"
+        android:name="com.prayosof.yvideo.view.fragment.audio.TracksFragment"
+        android:label="Tracks"
+        tools:layout="@layout/fragment_tracks" />
+    <fragment
+        android:id="@+id/bottom_punjabi"
+        android:name="com.prayosof.yvideo.view.fragment.punjabi_online.PunjabiOnlieFragment"
+        android:label="Punjabi songs"
+        tools:layout="@layout/fragment_punjabi_onlie" />
+    <fragment
+        android:id="@+id/nav_download"
+        android:name="com.prayosof.yvideo.view.fragment.online.DownloadFragment"
+        android:label="Online Download"
+        tools:layout="@layout/fragment_download" />
+</navigation>

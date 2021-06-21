@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activitycontent.ScreenCastActivity">
+    <item
+        android:id="@+id/play_action_btn"
+        android:title="Play" />
+    <item
+        android:id="@+id/remove_action_btn"
+        android:title="Remove" />
+    <item
+        android:id="@+id/rename_action_btn"
+        android:title="Rename" />
+    <item
+        android:id="@+id/moveFile"
+        android:title="Move" />
+    <item
+        android:id="@+id/share_action_btn"
+        android:title="Share" />
+</menu>

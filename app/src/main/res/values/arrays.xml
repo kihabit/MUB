@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="images">
+        <item>@drawable/brand_logo</item>
+        <item>@drawable/brand_logo</item>
+        <item>@drawable/brand_logo</item>
+        <item>@drawable/brand_logo</item>
+        <item>@drawable/brand_logo</item>
+    </array>
+
+</resources>

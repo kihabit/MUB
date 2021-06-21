@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".view.activity.Splash2Activity"
+    android:gravity="center">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_bg_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+<!--<ImageView android:id="@+id/splashscreen"-->
+<!--    android:layout_width="140dp"-->
+<!--    android:layout_height="140dp"-->
+<!--    android:src="@drawable/brand_logo"-->
+<!--    android:layout_gravity="center"/>-->
+
+<!--<TextView android:layout_width="fill_parent"-->
+<!--    android:gravity="center"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="P - Player"-->
+<!--    android:textStyle="bold"-->
+<!--    android:textSize="22dp"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:textColor="@color/white"-->
+<!--/>-->
+
+</LinearLayout>

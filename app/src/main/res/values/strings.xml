@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Music Bazaar</string>
+
+    <!-- OnBoard Screen. -->
+
+    <string name="ob_header1">Header 1</string>
+    <string name="ob_header2">Header 2</string>
+    <string name="ob_header3">Header 3</string>
+
+    <string name="ob_get_started">GET STARTED</string>
+
+    <string name="ob_desc1">Onboard item dexcription - first</string>
+    <string name="ob_desc2">Onboard item dexcription - second</string>
+    <string name="ob_desc3">Onboard item dexcription - third</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">About Us text</string>
+
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+
+    <!-- Bottom Navigation -->
+    <string name="title_notifications">Notifications</string>
+    <string name="title_videos">Videos</string>
+    <string name="title_music">Music</string>
+    <string name="action_share_app">Share App</string>
+    <string name="action_sort_by">Sort By</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_aboute_us">About Us</string>
+    <string name="menu_duplicate_directory">Duplicate Directory</string>
+    <string name="title_local_videos">Local Videos</string>
+    <string name="title_local_music">Local Music</string>
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <string name="auto_play_next_title">Auto play next</string>
+    <string name="menu_setting">Setting</string>
+    <string name="pinch_to_zoom_video">Pinch to zoom video</string>
+    <string name="remember_brightness_value">Remember brightness</string>
+    <string name="dark_mode">Dark Mode</string>
+
+
+    <string name="d_Hz">%1$d Hz</string>
+    <string name="s_kHz">%1$s kHz</string>
+    <string name="Bass_Boost">Bass Boost</string>
+    <string name="Equalizer">Equalizer</string>
+    <string name="volume">Volume</string>
+    <string name="brightness">Brightness</string>
+    <string name="virtualizer">Virtualizer</string>
+    <string name="bass_boost_and_virtualizer">BassBoost and Virtualizer</string>
+    <string name="action_download">Download</string>
+    <string name="clear_app_data">Clear App Data</string>
+    <string name="MoreApps">More Apps</string>
+    <string name="Share_This_App">Share App</string>
+    <string name="About">About</string>
+
+    <!-- Toast Messages -->
+    <string name="repeat_mode_on">Song Repeat On</string>
+    <string name="repeat_mode_off">Repeat Off</string>
+    <string name="shuffle_on">Shuffle On</string>
+    <string name="shuffle_off">Shuffle Off</string>
+    <!-- App name -->
+
+
+    <!--    facebook online-->
+    <string name="buy_add_free_version">Buy Ad Free Version</string>
+
+    <string name="description">Media Controls</string>
+    <string name="toast_file_delete">%1$s successfully deleted</string>
+    <string name="toast_file_exists">The file %1$s already exists. Please choose a different file name.</string>
+    <string name="dialog_title_delete">Confirm Delete...</string>
+    <string name="dialog_text_delete">Are you sure you would like to delete this file?</string>
+    <string name="dialog_title_options">Options</string>
+    <string name="dialog_file_share">Share File</string>
+    <string name="dialog_file_rename">Rename File</string>
+    <string name="dialog_title_rename">Rename File</string>
+    <string name="dialog_file_delete">Delete File</string>
+    <string name="dialog_action_cancel">Cancel</string>
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_action_yes">Yes</string>
+    <string name="dialog_action_no">No</string>
+    <string name="send_to">Send to</string>
+    <string name="banner_home_footer">ca-app-pub-0664570763252260/3326522424</string>
+    <string name="interstitial_full_screen">ca-app-pub-0664570763252260/1769900428</string>
+
+    <string name="str_pause">PAUSE</string>
+    <string name="str_playing">Playing</string>
+    <string name="str_play">PLAY</string>
+    <string name="str_paused">Paused</string>
+    <string name="str_stopped">Stopped</string>
+    <string name="info">Version</string>
+    <string name="ver">Version</string>
+    <string name="authors">Authors</string>
+    <string name="dev">Yogesh Nikam</string>
+    <string name="deseg_dev">Developer</string>
+    <string name="deseg_hpm">Head Product Manager</string>
+    <string name="hpm">Neeraj</string>
+    <string name="graphics_d">Designer Name</string>
+    <string name="deseg_gd">Graphics Designer</string>
+    <string name="product_man">Product Manager name</string>
+    <string name="deseg_pm">Product Manager</string>
+    <string name="donate">Donate</string>
+    <string name="support">Support</string>
+    <string name="about_also">Some other text</string>
+
+    <string name="notification_channel">Now Playing</string>
+    <string name="notification_channel_description">Shows what music is currently playing in UAMP</string>
+    <string name="no_video_msg">Please go to <b>video detail page</b> to <b>play video first</b>, and the download button will be available after Video Downloader detects the video.</string>
+
+    <string-array name="blocked_sites">
+        <item>youtube.com</item>
+    </string-array>
+
+    <string name="BYTE_Size">%1$.1f B</string>
+    <string name="KB_Size">%1$.1f KB</string>
+    <string name="MB_Size">%1$.1f MB</string>
+    <string name="GB_Size">%1$.1f GB</string>
+</resources>

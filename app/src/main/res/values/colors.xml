@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ca3b3b</color>
+    <color name="colorPrimaryDark">#920014</color>
+    <color name="colorAccent">#8e0000</color>
+
+<!--    <color name="colorPrimary">#2D9CDB</color>-->
+<!--    <color name="colorPrimaryDark">#2992CD</color>-->
+<!--    <color name="colorAccent">#FFFFFF</color>-->
+    <color name="black">#2a2a2a</color>
+    <color name="white">#FFFFFF</color>
+
+    <!--OnBoard-->
+
+    <color name="selected_dot">#2D9CDB</color>
+    <color name="idle_dot">#662D9CDB</color>
+    <color name="ob_header">#4A4A4A</color>
+    <color name="ob_desc">#4A4A4A</color>
+    <color name="md_grey_300">#E0E0E0</color>
+
+    <color name="background">#23000000</color>
+    <color name="gray">#808080</color>
+
+    <color name="orangered">#FF4500	</color>
+
+
+    <color name="facebook_color">#1877F2</color>
+    <color name="instagram_color">#E1306C</color>
+
+    <color name="twitter_color">#1DA1F2	</color>
+
+
+
+    <!-- A transparent black -->
+
+    <!-- selected tab text -->
+
+    <!-- non selected tab text -->
+
+    <!-- Transparent -->
+
+    <!-- Black -->
+<!--    <color name="black">#ff000000</color>-->
+
+    <!-- White -->
+<!--    <color name="white">#ffffffff</color>-->
+
+
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorActionBar">#FA1B1B</color>
+    <color name="Vulcan">#76526c</color>
+    <color name="NightRider">#303030</color>
+    <color name="tab_background_selected">#39a285</color>
+    <color name="colorGreen">#4CB04E</color>
+    <color name="dark_gray">#7f000000</color>
+    <color name="light_gray">#E1E1E1</color>
+
+</resources>
