@@ -29,6 +29,7 @@ import com.prayosof.yvideo.services.NewMediaPlayerService
 import com.prayosof.yvideo.view.activity.AudioPlayerActivity
 import com.prayosof.yvideo.view.fragment.BaseFragment
 import denis.musicplayer.data.media.model.Track
+import java.lang.IllegalStateException
 
 open class TracksFragment : BaseFragment(), CustomOnClickListener, Playable, View.OnClickListener {
     private lateinit var recyclerView: RecyclerView
@@ -52,13 +53,13 @@ open class TracksFragment : BaseFragment(), CustomOnClickListener, Playable, Vie
     lateinit var includeMiniPlayer: MaterialCardView
 
     lateinit var playerIntent: Intent
-     var serviceBound = false
+    var serviceBound = false
     lateinit var mPlayable: Playable
     lateinit var mpButtonPrevious: ImageButton
     lateinit var mpCurrentSongPauseBtn:ImageButton
     lateinit var mpButtonNext:ImageButton
     lateinit var mSeekbarUpdater: Runnable
-     var handler = Handler()
+    var handler = Handler()
     lateinit var mpSongTitle: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -211,7 +212,12 @@ open class TracksFragment : BaseFragment(), CustomOnClickListener, Playable, Vie
                 val title = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))
                 val artist = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST))
                 val data = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA))
-                val duration = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DURATION))
+                var duration = ""
+                try {
+                    duration = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DURATION))
+                }catch (e : IllegalStateException){
+                    println(e)
+                }
                 //String duration = Track.convertDuration(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION)));
 //                 var mAlbumId : Long = 0
 //                if(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID) != null) {

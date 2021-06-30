@@ -13,22 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 import com.prayosof.yvideo.R;
 import com.prayosof.yvideo.helper.DialogHelper;
 import com.prayosof.yvideo.interfaces.CustomOnClickListener;
-import com.prayosof.yvideo.model.MusicFiles;
 import com.prayosof.yvideo.view.activity.AudioPlayerActivity;
-import com.prayosof.yvideo.view.activity.PlayerActivity;
-import com.prayosof.yvideo.view.activity.TestActivity;
-import com.prayosof.yvideo.view.activity.audios.NewAudioActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -103,7 +97,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
             @Override
             public void onClick(final View v) {
 
-                androidx.appcompat.widget.PopupMenu popupMenu = new androidx.appcompat.widget.PopupMenu(mContext, v);
+                PopupMenu popupMenu = new PopupMenu(mContext, v);
 
                 popupMenu.getMenu().add(1, R.id.delete, 1, "Delete");
                 popupMenu.getMenu().add(1, R.id.share_file, 1, "Share");
@@ -166,15 +160,20 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
 
     private void deleteFile(int position, View v) {
         Uri contentUri = ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
-               mFiles.get(position).getId()); // get the uri content
+                mFiles.get(position).getId()); // get the uri content
 
         File file = new File(mFiles.get(position).getData());
         boolean deleted = file.delete();  // delete the file
         if (deleted) {
-            mContext.getContentResolver().delete(contentUri, null, null);
-            mFiles.remove(position);
-            notifyItemRemoved(position);
-            notifyItemRangeChanged(position, mFiles.size());
+            try {
+                mContext.getContentResolver().delete(contentUri, null, null);
+                mFiles.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position, mFiles.size());
+            } catch (SecurityException e) {
+                e.printStackTrace();
+            }
+
             Snackbar.make(v, "File deleted", Snackbar.LENGTH_LONG).show();
         } else {
             // if file is in sd card or api level is 19

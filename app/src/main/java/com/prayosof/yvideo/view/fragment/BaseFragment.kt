@@ -22,11 +22,11 @@ abstract class BaseFragment : Fragment() {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK
             putExtra(
                     Intent.EXTRA_SUBJECT,
-                    "P-MediaPlayer"
+                    "MusicBazaar"
             )
             putExtra(
                     Intent.EXTRA_TEXT,
-                    "P-MediaPlayer - Download link"
+                    "MusicBazaar:https://play.google.com/store/apps/details?id=com.mub.videoplayer"
             )
             val fileURI = FileProvider.getUriForFile(
                     requireContext(), requireContext().packageName + ".provider",

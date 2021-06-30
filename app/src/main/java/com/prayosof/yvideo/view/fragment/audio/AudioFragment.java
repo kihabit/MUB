@@ -130,10 +130,10 @@ public class AudioFragment extends Fragment implements View.OnClickListener, Pla
         TabLayout tabLayout = root.findViewById(R.id.tab_layout);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getChildFragmentManager());
         viewPagerAdapter.addFragments(new AudioListFragment(), "Folder");
-        viewPagerAdapter.addFragments(new SongsFragment(), "Songs");
+        //viewPagerAdapter.addFragments(new SongsFragment(), "Songs");
         viewPagerAdapter.addFragments(new AlbumFragment(), "Albums");
-        viewPagerAdapter.addFragments(new ArtistFragment(), "Artist");
-        viewPagerAdapter.addFragments(new GenresFragment(), "Genres");
+        //viewPagerAdapter.addFragments(new ArtistFragment(), "Artist");
+        //viewPagerAdapter.addFragments(new GenresFragment(), "Genres");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
